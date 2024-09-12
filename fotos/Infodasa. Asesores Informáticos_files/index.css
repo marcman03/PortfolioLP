@@ -1,0 +1,20 @@
+/* CSS Document */
+
+#indexMenu { margin-top:20px; }
+	#indexMenu li { float:left; }
+		#indexMenu li { margin-left:19px; }
+	#indexMenu a  { display:inline-block; width:145px; height:116px; background-position:top; }
+		#indexMenu a:hover { background-position:bottom; }
+		
+#support { margin-bottom:12px; width:194px; height:40px; padding:90px 0 0 10px; background:url('../images/support2016.jpg'); }
+	#support input[type="text"] { width:80px; padding:5px; }
+	
+.social {  }
+	
+	.social a         { width:25px; height:25px; display:inline-block; background-image:url('../images/social.gif'); margin-left:2px; vertical-align:middle; }
+	.social .facebook { background-position:0;  }
+	.social .twitter  { background-position:-25px 0;  }
+	.social .gplus    { background-position:-50px 0;  }
+	.social .youtube  { background-position:-75px 0;  }		
+	.social .linkedin { background-position:-100px 0;  }	
+	.social .blogspot { background-position:-125px 0;  }		
