@@ -18,3 +18,45 @@ container.addEventListener('mousemove', (e) => {
     titleh1.style.transform = `translateX(${offsetX / 1.5}px)`;
     titleh2.style.transform = `translateX(${offsetX /1.2 }px)`;
 });
+
+const cursorDot = document.querySelector("[data-cursor-dot]");
+const lightMask = document.querySelector("[data-light-mask]");
+
+window.addEventListener("mousemove",function(e){
+    const posX =e.clientX;
+    const posY = e.clientY;
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+    lightMask.style.display = 'block';
+    lightMask.animate([
+        { left: `${posX}px`, top: `${posY}px` }
+    ], { duration: 100, fill: "forwards"});
+
+});
+
+
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+    
+    // Ocultar el slide actual
+    slides[currentIndex].style.display = 'none';
+    
+    // Actualizar el índice
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    
+    // Mostrar el nuevo slide
+    slides[currentIndex].style.display = 'block';
+}
+
+// Inicializa el carrusel mostrando solo la primera slide
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.carousel-item');
+    slides.forEach((slide, index) => {
+        slide.style.display = index === 0 ? 'block' : 'none';
+    });
+});
+
+

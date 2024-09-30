@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <div class="cursor-dot" data-cursor-dot></div> 
+    <div class="light-mask" data-light-mask></div>
     <header class="header">
         <h1 class="h1"><a href="" title="Marc Pascual" class="a">Marc Pascual </a></h1>
         <nav class="nav">
             <ul class="ul">
                 <li class="li"><a href="#home" title="Home" class="a">HOME</a></li>
-                <li class="li"><a href="#" title="Works"  class="a">WORKS</a></li>
+                <li class="li"><a href="#works" title="Works"  class="a">WORKS</a></li>
                 <li class="li"><a href="#about" title="About"  class="a">ABOUT</a></li>
             </ul>
         </nav>
@@ -29,11 +31,12 @@
         
             <div class="title">
                 <div class="title-container">
-                    <h1 class="h1 parallax-title-h1">Marc Pascual</h2>
-                    <h2 class="h2 parallax-title-h2">Full-stack Developer</h3>
+                    <h1 class="h1 parallax-title-h1">Marc Pascual</h1>
+                    <h2 class="h2 parallax-title-h2">Sofware Engineering</h2>
                 </div>
             </div>
             <div class="parallax-container">
+                
                 
                 <img src="fotos\Background.png" alt="skyparallax" class="parallax-item-background">
                 <img src="fotos\mountain.png" alt="mountain parallax" class="parallax-item-mountain">
@@ -41,128 +44,210 @@
         </section>
 
         <section class="section works" id="works">
-            <h2 class="h2">Works</h2> 
-            <p>Aquí te presento mis trabajos mientras tal tal</p>
+            <h6 class="h6">Works</h6>
             <div class="grid">
+                <article class="article work-item ">
+                    <!-- Sección de texto -->
+                    <div class="work-text">
+                        <!-- Descripción del proyecto -->
+                        <h2 class="h2">Decentralized Voting System</h2>
+                        <p>
+                            I envisioned developing a decentralized voting system using blockchain technology, 
+                            but for this project, I implemented a conventional database to explore what kind of data would need to be stored.
+                            This helped me understand the structure required for a future blockchain implementation.
+                        </p>
                 
-                <article class="article">
-                    <a href="#" class="a" title="Trabajo1">
-                        <figure class="figure">
-                            <img src="fotos\media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png" alt="imatge" class="img" loading="lazy">
-                        </figure>
-                        <h4 class="h4">nombre trabajo </h4>
-                    </a>
+                        <!-- Objetivos del proyecto -->
+                        <h5 class="h5">Objectives</h5>
+                        <ul class="objectives">
+                            <li>Create an intuitive interface to manage large sets of data.</li>
+                            <li>Develop a script to generate and populate a database with millions of records.</li>
+                            <li>Simulate a secure voting system where votes can be reviewed on a "blockchain".</li>
+                            <li>Create two user roles: one who can generate votes (administrator) and another who can vote (member).</li>
+                        </ul>
+                
+                        <!-- Lecciones aprendidas -->
+                        <h5 class="h5">What I Learned</h5>
+                        <p>
+                            One of the most valuable lessons I learned in this project was how to efficiently handle large amounts of data. 
+                            By developing a script that generated millions of records and implementing a system capable of managing these volumes, 
+                            I gained a deep understanding of the challenges and strategies involved in large-scale data management.
+                        </p>
+                
+                        <!-- Tecnologías usadas -->
+                        <h5 class="h5">Technologies Used</h5>
+                        <ul class="technologies">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>Vue.js</li>
+                            <li>PostgreSQL</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                        </ul>
+                
+                        <!-- Botón de enlace al proyecto -->
+                        <div class="center">
+                            <button class="project-link" onclick="window.open('https://github.com/marcman03/votacionDescentralizada', '_blank')">View Project</button>
+                        </div>
+                    </div>
+                
+                    <!-- Carrusel de imágenes y video -->
+                    <figure class="work-figure carousel-container">
+                        <div class="carousel-slide">
+                            <!-- Video -->
+                            <div class="carousel-item">
+                                <video controls class="work-video">
+                                    <source src="/videos/DecentralizedVoting .mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>This video explains the entire functionality of the decentralized voting system.</figcaption>
+                            </div>
+                
+                            <!-- Imagen -->
+                            <div class="carousel-item">
+                                <img src="/fotos/ERP1.png" alt="Relational schema" class="work-img">
+                                <figcaption>This is a relational schema where <strong>Unique</strong> is highlighted.</figcaption>
+                            </div>
+                        </div>
+                
+                        <!-- Botones de navegación -->
+                        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+                    </figure>
                 </article>
                 
-                <article class="article">
-                    <a href="#" class="a" title="Trabajo2">
-                        <figure class="figure">
-                            <img src="" alt="imatge" class="img" loading="lazy">
-                        </figure>
-                        <h4 class="h4">nombre trabajo </h4>
-                    </a>
+                
+                
+                <article class="article work-item reverse">
+                    <!-- Sección de texto -->
+                    <div class="work-text">
+                        <!-- Descripción del proyecto -->
+                        <h2 class="h2">Checkers AI </h2>
+                        <p>
+                            In this project, I developed an AI to play checkers using the Minimax algorithm with enhancements like Iterative Deepening Search (IDS) and Zobrist hashing for board state optimization. 
+                            The project was based on an environment provided by my professor, which included a pre-built checkers board and various helper functions to manage the game's logic and state.
+                            This foundation allowed me to focus on implementing and optimizing the AI algorithms to make the player more competitive.
+                        </p>
+                
+                        <!-- Objetivos del proyecto -->
+                        <h5 class="h5">Objectives</h5>
+                        <ul class="objectives">
+                            <li>Implement the Minimax algorithm with alpha-beta pruning for decision-making in a checkers game.</li>
+                            <li>Create two AI players: one using Iterative Deepening Search (IDS) with a time constraint and another using a fixed depth limit for the Minimax search.</li>
+                            <li>Optimize board evaluations using Zobrist hashing to speed up move generation and avoid redundant calculations.</li>
+                            <li>Design a robust heuristic based on piece counting, triangular formations, and trap identification to improve AI decision-making.</li>
+                        </ul>
+                
+                        <!-- Lecciones aprendidas -->
+                        <h5 class="h5">What I Learned</h5>
+                        <p>
+                            This project taught me how to efficiently apply the Minimax algorithm in a real-world scenario by integrating optimization techniques such as Zobrist hashing and IDS. 
+                            I learned how to handle time constraints while maintaining competitive performance and how to balance the trade-offs between search depth and computational speed.
+                        </p>
+                
+                        <!-- Tecnologías usadas -->
+                        <h5 class="h5">Technologies Used</h5>
+                        <ul class="technologies">
+                            <li>Java</li>
+                            <li>Minimax Algorithm</li>
+                            <li>Alpha-beta Pruning</li>
+                            <li>Iterative Deepening Search (IDS)</li>
+                            <li>Zobrist Hashing</li>
+                        </ul>
+                
+                        <!-- Botón de enlace al proyecto -->
+                        <div class="center">
+                            <button class="project-link" onclick="window.open('https://github.com/marcman03/checkers', '_blank')">View Project</button>
+                        </div>
+                    </div>
+                
+                    <!-- Carrusel de imágenes y video -->
+                    <figure class="work-figure carousel-container">
+                        <div class="carousel-slide">
+                            <!-- Video -->
+                            <div class="carousel-item">
+                                <video controls class="work-video">
+                                    <source src="/videos/CheckersAI.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>This video demonstrates the Checkers AI in action, showing how Minimax and IDS are used in decision-making.</figcaption>
+                            </div>
+                
+                            <!-- Imagen -->
+                            <div class="carousel-item">
+                                <img src="/fotos/CheckersBoard.png" alt="Checkers board with Zobrist hashing" class="work-img">
+                                <figcaption>This image highlights how Zobrist hashing is used to optimize board state evaluation in the Checkers AI.</figcaption>
+                            </div>
+                        </div>
+                
+                        <!-- Botones de navegación -->
+                        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+                    </figure>
                 </article>
-                <article class="article">
-                    <a href="#" class="a" title="Trabajo3">
-                        <figure class="figure">
-                            <img src="#" alt="imatge" class="img" loading="lazy">
-                        </figure>
-                        <h4 class="h4">nombre trabajo </h4>
-                    </a>
-                </article>
+              
             </div>
-            <!--
-            <div class="container-works">
-                <img src="fotos\foto2.jpg" alt="background" class="works-background">
-                </img>
-            </div>
-            -->
-            
         </section>
+        
+        
 
         <section class="section about" id="about">
             <div class="center-text">
                 <h6 class="h6">About me</h6>
-                <h2 class="h2"><span class="span">MARC PASCUAL&nbsp;</span>— FULL STACK DEVELOPER</h2>
+                <h2 class="h2"><span class="span">MARC PASCUAL&nbsp;</span>— SOFTWARE ENGINEERING</h2>
             
                 <figure class="figure">
-                    <img src="fotos\media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png" alt="Marc Pacual's imatge" class="img">
+                    <img src="fotos/fotolinkedin+.jpeg" alt="Marc Pacual's imatge" class="img">
                     <h5 class="h5"><span class="span">Marc Pascual&nbsp;</span>
                         — Based in <span class="green">Barcelona</span>, Spain&nbsp;
-                        — Currently studying 3rd year of Software Engineering at the<span class="green"> Polytechnic University of Catalonia</span>.
+                        — Currently studying 4rd year of Software Engineering at the<span class="green"> Polytechnic University of Catalonia</span>.
                     </h5>
                 </figure>
                 <div class="text">
-                        <p class="p-left">
-                            I am 19 years old and an enthusiastic student of Computer Engineering with 
-                            a strong passion for creativity and technological innovation.
-                            Technology's ability to reshape our world has fascinated me from a young age.
-                            <br>
-                            <br>
-                            My main goal is to become in a full stack developer capable of creating solutions and solving various problems. To achieve this,
-                            i am hightly interested in a job that can provide me with valuable learning opportunities.
-                            </p>
-                        <p class="p-right">
-                            Through my journey in learning programming, I've gained a range of skills beyond just programing languages
-                            . I've developed the ability to tackle challenges head-on.
-                            <br>
-                            <br>
-                            In addition, my dedication to continuous learning has led me to explore various technologies, frameworks, and tools, enabling me to adapt and thrive in a fast-paced technological landscape.
-                        </p>
-                    
+                    <p class="p-left">
+                        I am 19 years old and an enthusiastic student of <em>Computer Engineering</em> with 
+                        a strong passion for creativity and technological innovation.
+                        Technology's ability to reshape our world has fascinated me from a young age.
+                        <br><br>
+                        My main goal is to become a <strong>full stack developer</strong> capable of creating solutions and solving various problems. To achieve this,
+                        I am highly interested in a job that can provide me with valuable learning opportunities.
+                    </p>
+                    <p class="p-right">
+                        Through my journey in learning programming, I've gained a comprehensive range of skills beyond just programming languages. 
+                        I've developed the <strong>strong</strong> ability to tackle challenges head-on.
+                        <br><br>
+                        In addition, my dedication to continuous learning has led me to explore various <em>technologies, frameworks, and tools</em>, enabling me to adapt and thrive in a fast-paced technological landscape.
+                    </p>
                 </div>
                 
+                
                 <button class="button">
-                    <a href="#" class="a">
+                    <a href="/fotos/CURRICULUM MARC PASCUAL.pdf" target="_blank"  class="a">
                         <span class="span">My resume</span>
                     </a>
                 </button>
             </div>
         </section>
-        <section class="section contact" id="Contact">
-            <h3>GET IN TOUCH</h3>
-
-
-
-
-            <ul class="rss">
-                <li class="li">
-                    <a href="#" class="a" title="rss" target="_blink" rel="noopener refererrer">
-                        <svg class="svg">
-
-                        </svg>
-
-                </a>
-                </li>
-                <li class="li">
-                    <a href="#" class="a" title="rss" target="_blink" rel="noopener refererrer">
-                        <svg class="svg">
-
-                        </svg>
-
-                </a>
-                </li>
-                <li class="li">
-                    <a href="#" class="a" title="rss" target="_blink" rel="noopener refererrer">
-                        <svg class="svg">
-
-                        </svg>
-
-                </a>
-                </li>
-
-            </ul>
-        </section>
-
-
-
-
-    </main>
-    <footer class="footer">
+        <footer class="footer" id="contact">
+            <h3 class="footer-title">Contact with me:</h3>
         
-        <p>Made by Marc pascual</p> 
-
-    </footer>
+            <div class="footer-links">
+                <a href="https://github.com/marcman03" target="_blank" aria-label="GitHub" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="black">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.205 11.385.6.11.82-.26.82-.577v-2.24c-3.338.726-4.042-1.416-4.042-1.416-.546-1.385-1.333-1.754-1.333-1.754-1.09-.744.083-.729.083-.729 1.205.084 1.84 1.239 1.84 1.239 1.07 1.835 2.805 1.305 3.492.997.108-.775.42-1.305.762-1.605-2.665-.305-5.466-1.333-5.466-5.932 0-1.311.47-2.382 1.239-3.222-.125-.303-.538-1.523.118-3.176 0 0 1.008-.323 3.302 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.553 3.302-1.23 3.302-1.23.656 1.653.243 2.873.118 3.176.77.84 1.239 1.911 1.239 3.222 0 4.61-2.805 5.623-5.475 5.92.432.373.817 1.102.817 2.222v3.293c0 .319.218.69.825.573C20.565 21.797 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+        
+                <a href="https://www.linkedin.com/in/marc-pascual-desentre-a11b681a9/" target="_blank" aria-label="LinkedIn" class="footer-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="black">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.379-.02-3.156-2.046-3.156-2.05 0-2.364 1.532-2.364 3.056v5.6h-3v-10h2.881v1.367h.042c.4-.76 1.379-1.561 2.837-1.561 3.033 0 3.594 1.995 3.594 4.591v5.603z"/>
+                    </svg>
+                </a>
+            </div>
+        
+            <p class="footer-email">Email: <a href="mailto:marc.pascual.desentre@estudiantat.upc.edu" class="footer-email-link">marc.pascual.desentre@estudiantat.upc.edu</a></p>
+        </footer>
+    
 <script src="js\app.js"></script>
 
 </body>
