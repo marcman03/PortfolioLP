@@ -366,27 +366,29 @@ no-repeat center center /cover;
 .work-figure {
   position: relative; /* Permite que los botones se posicionen dentro del contenedor */
   max-width: 48%; /* Ajusta el ancho máximo del carrusel */
-  margin: 0 auto; /* Centra el contenedor */
+  margin: 3.4rem auto; /* Centra el contenedor */
   overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 20px; /* Bordes redondeados */
 }
+
 
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
+
 }
 
 .carousel-item {
   min-width: 100%; /* Cada item (video o imagen) ocupa todo el ancho del contenedor */
 
   box-sizing: border-box;
+
 }
 
 /* Estilos para el video */
 .work-video,.work-img {
   width: 100%;
-  max-height: 500px;
-  height: auto;
+  height: 500px;
   border-radius: 8px; /* Bordes redondeados en el video */
 }
 

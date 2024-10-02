@@ -35,28 +35,27 @@ window.addEventListener("mousemove",function(e){
 });
 
 
-let currentIndex = 0;
-
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
+let currentSlide = {
+    carousel1: 0,
+    carousel2: 0,
+    carousel3:0
+  };
+  
+  function moveSlide(n, carouselId) {
+    const slides = document.querySelectorAll(`#${carouselId} .carousel-item${carouselId === 'carousel1' ? '1' : '2'}`);
+    currentSlide[carouselId] = (currentSlide[carouselId] + n + slides.length) % slides.length;
     
-    // Ocultar el slide actual
-    slides[currentIndex].style.display = 'none';
+    // Ocultar todos los slides
+    slides.forEach(slide => slide.style.display = 'none');
     
-    // Actualizar el índice
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-    
-    // Mostrar el nuevo slide
-    slides[currentIndex].style.display = 'block';
-}
-
-// Inicializa el carrusel mostrando solo la primera slide
-document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.carousel-item');
-    slides.forEach((slide, index) => {
-        slide.style.display = index === 0 ? 'block' : 'none';
-    });
-});
-
+    // Mostrar el slide actual
+    slides[currentSlide[carouselId]].style.display = 'block';
+  }
+  
+  // Mostrar el primer slide de cada carrusel al cargar la página
+  document.addEventListener("DOMContentLoaded", function() {
+    moveSlide(0, 'carousel1');
+    moveSlide(0, 'carousel2');
+  });
+  
 
