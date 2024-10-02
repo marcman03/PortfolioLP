@@ -370,6 +370,14 @@ no-repeat center center /cover;
   overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
   border-radius: 20px; /* Bordes redondeados */
 }
+.work-figurerobo{
+  position: relative; /* Permite que los botones se posicionen dentro del contenedor */
+  max-width: 48%; /* Ajusta el ancho máximo del carrusel */
+  margin: 0rem auto; /* Centra el contenedor */
+  overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
+  border-radius: 20px; /* Bordes redondeados */
+  
+}
 
 
 .carousel-slide {
@@ -388,8 +396,14 @@ no-repeat center center /cover;
 /* Estilos para el video */
 .work-video,.work-img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   border-radius: 8px; /* Bordes redondeados en el video */
+}
+.work-robocode{
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  
 }
 
 
@@ -400,6 +414,11 @@ figcaption {
   margin-top: 0.5rem;
   color: rgb(180, 187, 182);
   font-weight:200;
+  margin-left: 0.4rem;
+}
+.work-figurerobo .fig-robocode{
+
+  width: 80%;
 }
 
 /* Botones de navegación del carrusel */
