@@ -35,27 +35,42 @@ window.addEventListener("mousemove",function(e){
 });
 
 
-let currentSlide = {
-    carousel1: 0,
-    carousel2: 0,
-    carousel3:0
-  };
+// Crear un objeto para almacenar el índice actual de cada carrusel
+let currentSlideIndex = {};
+
+// Función para mover el slide en un carrusel específico
+function moveSlide(n, carouselId) {
+  const slides = document.querySelectorAll(`#${carouselId} .carousel-item`);
   
-  function moveSlide(n, carouselId) {
-    const slides = document.querySelectorAll(`#${carouselId} .carousel-item${carouselId === 'carousel1' ? '1' : '2'}`);
-    currentSlide[carouselId] = (currentSlide[carouselId] + n + slides.length) % slides.length;
-    
-    // Ocultar todos los slides
-    slides.forEach(slide => slide.style.display = 'none');
-    
-    // Mostrar el slide actual
-    slides[currentSlide[carouselId]].style.display = 'block';
+  // Si el índice del carrusel no existe aún, inicializarlo
+  if (!currentSlideIndex[carouselId]) {
+    currentSlideIndex[carouselId] = 0;
   }
   
-  // Mostrar el primer slide de cada carrusel al cargar la página
-  document.addEventListener("DOMContentLoaded", function() {
-    moveSlide(0, 'carousel1');
-    moveSlide(0, 'carousel2');
-  });
+  // Calcular el nuevo índice del slide
+  currentSlideIndex[carouselId] = (currentSlideIndex[carouselId] + n + slides.length) % slides.length;
   
+  // Ocultar todos los slides
+  slides.forEach(slide => slide.style.display = 'none');
+  
+  // Mostrar el slide actual
+  slides[currentSlideIndex[carouselId]].style.display = 'block';
+}
+
+// Inicializar todos los carruseles
+function initCarousels() {
+  const carousels = document.querySelectorAll('.carousel-container');
+  
+  carousels.forEach(carousel => {
+    const carouselId = carousel.id;
+    
+    // Mostrar el primer slide de cada carrusel
+    moveSlide(0, carouselId);
+  });
+}
+
+// Llamar a la función para inicializar los carruseles cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", function() {
+  initCarousels();
+});
 

@@ -38,8 +38,8 @@
             <div class="parallax-container">
                 
                 
-                <img src="fotos\Background.png" alt="skyparallax" class="parallax-item-background">
-                <img src="fotos\mountain.png" alt="mountain parallax" class="parallax-item-mountain">
+                <img src="./fotos/Background.png" alt="skyparallax" class="parallax-item-background">
+                <img src="./fotos/mountain.png" alt="mountain parallax" class="parallax-item-mountain">
             </div>
         </section>
 
@@ -88,20 +88,20 @@
                     </div>
         
                     <!-- Carrusel del primer proyecto -->
-                    <figure class="work-figure carousel-container">
-                        <div class="carousel-slide" id="carousel1">
+                    <figure class="work-figure carousel-container"  id="carousel1">
+                        <div class="carousel-slide">
                             <!-- Video -->
-                            <div class="carousel-item1">
+                            <div class="carousel-item">
                                 <video controls class="work-video">
-                                    <source src="/videos/DecentralizedVoting.mp4" type="video/mp4">
+                                    <source src="./videos/DecentralizedVoting.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <figcaption>This video explains the entire functionality of the decentralized voting system.</figcaption>
                             </div>
         
                             <!-- Imagen -->
-                            <div class="carousel-item1">
-                                <img src="/fotos/ERP1.png" alt="Relational schema" class="work-img">
+                            <div class="carousel-item">
+                                <img src="./fotos/ERP1.png" alt="Relational schema" class="work-img">
                                 <figcaption>This is a relational schema where <strong>Unique</strong> is highlighted.</figcaption>
                             </div>
                         </div>
@@ -150,12 +150,12 @@
                     </div>
         
                     <!-- Carrusel del segundo proyecto -->
-                    <figure class="work-figure carousel-container">
-                        <div class="carousel-slide" id="carousel2">
+                    <figure class="work-figure carousel-container"  id="carousel2" >
+                        <div class="carousel-slide">
                             <!-- Video -->
-                            <div class="carousel-item2">
+                            <div class="carousel-item">
                                 <video controls class="work-video">
-                                    <source src="/videos/deph8vsIDS.mp4" type="video/mp4">
+                                    <source src="./videos/deph8vsIDS.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <figcaption>
@@ -166,15 +166,15 @@
                             </div>
         
                             <!-- Imagen -->
-                            <div class="carousel-item2">
-                                <img src="/fotos/depht-O.png" alt="Checkers board with Zobrist hashing" class="work-img">
+                            <div class="carousel-item">
+                                <img src="./fotos/depht-O.png" alt="Checkers board with Zobrist hashing" class="work-img">
                                 <figcaption>In the image on the left, we can see the levels it descends without the improvement, and on the right, with the improvement applied.
                                      We can conclude that it descends 2 or 3 more levels thanks to the hash table with the Zobrist algorithm. 
                                      Both screenshots are taken at the start of the game, where they explore roughly the same possibilities for moves.</figcaption>
                             </div>
-                            <div class="carousel-item2">
+                            <div class="carousel-item">
                                 <video controls class="work-video">
-                                    <source src="/videos/deph4vsIDS.mp4" type="video/mp4">
+                                    <source src="./videos/deph4vsIDS.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <figcaption>
@@ -183,8 +183,8 @@
                                     The video is sped up to 3x for faster viewing.
                                 </figcaption>
                             </div>
-                            <div class="carousel-item2">
-                                <img src="/fotos/GraficaDeph.png" alt="Checkers board with Zobrist hashing" class="work-img">
+                            <div class="carousel-item">
+                                <img src="./fotos/GraficaDeph.png" alt="Checkers board with Zobrist hashing" class="work-img">
                                 <figcaption>
                                     This graph shows the maximum depth on the Y-axis and the timeout on the X-axis, using the most efficient algorithm I found.
                                 </figcaption>
@@ -226,17 +226,17 @@
                         </div>
                     </div>
                 
-                    <figure class="work-figurerobo">
-                        <video autoplay muted loop class="work-robocode">
-                            <source src="/videos/robocodePredator.mp4" type="video/mp4">
+                    <figure class="work-figure">
+                        <video autoplay muted loop class="work-video">
+                            <source src="./videos/robocodePredator.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <figcaption class="fig-robocode">
+                        <figcaption >
                             The video demonstrates a battle scenario where the "Predator" team uses its encircling and ramming strategy against the leader and droids team. The dynamic interaction showcases effective team coordination and strategy execution.
                         </figcaption>
                     </figure>
                 </article>
-                <article class="article work-item">
+                <article class="article work-item reverse">
                     <div class="work-text">
                         <h2 class="h2">Connect Four Game Module</h2>
                         <p>
@@ -263,13 +263,13 @@
                         </ul>
                 
                         <div class="center">
-                            <button class="project-link" onclick="window.open('https://github.com/marcman03/connectfour', '_blank')">View Project</button>
+                            <button class="project-link" onclick="window.open('https://github.com/marcman03/conecta4', '_blank')">View Project</button>
                         </div>
                     </div>
                 
                     <figure class="work-figure">
                         <video autoplay muted loop class="work-video">
-                            <source src="/videos/conecta4.mp4" type="video/mp4">
+                            <source src="./videos/conecta4.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <figcaption>
@@ -278,6 +278,166 @@
                     </figure>
                     
                 </article>
+                <article class="article work-item">
+                    <div class="work-text">
+                        <h2 class="h2">Craaxify Autonomous Transport Project</h2>
+                        <p>
+                            Craaxify was a university project where we developed a prototype for autonomous transport. I contributed actively by creating the mobile application,managing the database and producing the promotional video, while also helping in various other areas. The goal of the project was to simulate a connected autonomous vehicle system, integrating various technologies to demonstrate smart transportation management.
+                        </p>
+                        
+                        <h5 class="h5">Objectives</h5>
+                        <ul class="objectives">
+                            <li>Develop a mobile application that connects to a central API to control and monitor autonomous vehicles.</li>
+                            <li>Create a cloud-based system to calculate optimal routes using AI algorithms, and a local controller to manage real-time vehicle operations.</li>
+                            <li>Simulate a manually controlled vehicle to test the system's ability to calculate and optimize routes.</li>
+                        </ul>
+                        
+                        <h5 class="h5">What I Learned</h5>
+                        <p>
+                            Through this project, I gained valuable experience working on mobile application development, API integration, and real-time system management. I also learned the importance of teamwork in large-scale projects and contributed significantly by developing the mobile app and creating the promotional video.
+                        </p>
+                        
+                        <h5 class="h5">Technologies Used</h5>
+                        <ul class="technologies">
+                            <li>Java</li>
+                            <li>Android Sudio</li>
+                            <li>API Integration</li>
+                            <li>Cloud Computing</li>
+                            <li>MongoDB</li>
+                            <li>Agile Development</li>
+                        </ul>
+                        
+                        <div class="center">
+                            <button class="project-link" onclick="window.open('https://github.com/marcman03/Craaxify-app', '_blank')">View Project</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Carrusel del proyecto Craaxify -->
+                    <figure class="work-figure carousel-container" id="carousel3">
+                        <div class="carousel-slide" >
+                            <!-- Video Promocional -->
+                            <div class="carousel-item">
+                                <video controls class="work-video">
+                                    <source src="./videos/CraaxifyVP.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    This promotional video is focused on showcasing the Craaxify project in a commercial way, emphasizing its key features and value to potential users and stakeholders.
+                                </figcaption>
+                            </div>
+                
+                            <!-- Imagen de la aplicación móvil -->
+                            <div class="carousel-item">
+                                <video controls class="work-video" >
+                                    <source src="./videos/craaxifyFun.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    This video demonstrates the functionality of the Craaxify app, highlighting how it interacts with the autonomous vehicle system to manage and monitor operations in real-time.
+                                </figcaption>
+                            </div>
+                            <div class="carousel-item">
+                                <video controls class="work-video" muted >
+                                    <source src="./videos/CraaxifyWeb.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    This video demonstrates the main functionality of the Craaxify web platform, showing how users can request an autonomous vehicle in real-time.
+                                </figcaption>
+                            </div>
+
+                            <div class="carousel-item">
+                                <video controls class="work-video" muted >
+                                    <source src="./videos/CraaxifyCoche.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    This video shows the physical vehicle following a route requested through the app. It simulates a customer boarding by scanning an RFID sensor with a white card, and the vehicle drives towards another white card that simulates the final destination.
+                                </figcaption>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./fotos/schemaCraaxify.png" alt="Craaxify's Schema" class="work-img">
+                                <figcaption>
+                                    This diagram illustrates the architecture of the Craaxify autonomous transport system. The cloud is responsible for calculating routes, storing data, and making decisions. The web platform and mobile app send client requests and receive vehicle positions via an API. Controllers manage the vehicles in real-time, receiving data from the cloud and relaying it to the vehicles, which are equipped with sensors. MongoDB is used for data storage, allowing the system to access and process large amounts of information efficiently.
+                                </figcaption>
+                            </div>
+                            
+                
+                        <!-- Botones de navegación del carrusel -->
+                        <button class="prev-btn" onclick="moveSlide(-1, 'carousel3')">&#10094;</button>
+                        <button class="next-btn" onclick="moveSlide(1, 'carousel3')">&#10095;</button>
+                    </figure>
+                </article>
+
+                <article class="article work-item reverse">
+                    <div class="work-text">
+                        <h2 class="h2">PETSALUD - Social Network for Pet Owners</h2>
+                        <p>
+                            PETSALUD is a project we developed as a group, working with Agile methodologies in .NET. The goal of the project was to create a social network for pet owners where they could organize and participate in both public and private events. Public events, similar to an Instagram feed, could include activities like meet-ups or walks created by pet owners, and other users could join them. Additionally, there was a private section for veterinary clinics to manage consultations for pet health issues.
+                        </p>
+                        
+                        <h5 class="h5">Objectives</h5>
+                        <ul class="objectives">
+                            <li>Develop a public events feed for pet owners to create and join events like meet-ups and walks.</li>
+                            <li>Implement a private section for veterinary clinics to manage and schedule consultations with pet owners.</li>
+                            <li>Ensure the security of user data by encrypting passwords during the login process.</li>
+                        </ul>
+                        
+                        <h5 class="h5">What I Learned</h5>
+                        <p>
+                            Through this project, I gained hands-on experience in Agile development, working with a team to implement key features in .NET. I learned about integrating secure login processes with password encryption, as well as how to build a social network with both public and private event management functionalities.
+                        </p>
+                        
+                        <h5 class="h5">Technologies Used</h5>
+                        <ul class="technologies">
+                            <li>.NET</li>
+                            <li>C++</li>
+                            <li>Agile Methodology</li>
+                            <li>MySQL</li>
+                            <li>Password Encryption</li>
+                        </ul>
+                        
+                        <div class="center">
+                            <button class="project-link" onclick="window.open('https://github.com/AMEP-UPC/PetSalut', '_blank')">View Project</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Carrusel de imágenes y videos (si es necesario) -->
+                    <figure class="work-figure carousel-container" id="carousel4">
+                        <div class="carousel-slide">
+                            <!-- Imagen del logo de PETSALUD -->
+                            <div class="carousel-item">
+                                <img src="./fotos/PetSaludLogo.png" alt="PETSALUD Logo" class="work-img">
+                                <figcaption>
+                                    This is the official logo of PETSALUD, the platform for pet owners to connect and manage their pets' health and social activities.
+                                </figcaption>
+                            </div>
+                    
+                            <!-- Video demostrativo -->
+                            <div class="carousel-item">
+                                <video autoplay controls class="work-video">
+                                    <source src="./videos/PetSalud.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <figcaption>
+                                    This video demonstrates the key features of the PETSALUD platform, including the public event feed and private veterinary consultations.
+                                </figcaption>
+                            </div>
+                    
+                            <!-- DMC Schema -->
+                            <div class="carousel-item">
+                                <img src="./fotos/PetSaludDMC.png" alt="PETSALUD DMC schema" class="work-img">
+                                <figcaption>
+                                    This schema represents the architecture of the PETSALUD system, showcasing the connections between the public event feed, private veterinary events, and the overall system management.
+                                </figcaption>
+                            </div>
+                        </div>
+                        <!-- Botones de navegación del carrusel -->
+                        <button class="prev-btn" onclick="moveSlide(-1, 'carousel4')">&#10094;</button>
+                        <button class="next-btn" onclick="moveSlide(1, 'carousel4')">&#10095;</button>
+                    </figure>
+                </article>
+                
                 
                 
 

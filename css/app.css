@@ -203,10 +203,11 @@
       rgba(0, 0, 0, 0.9) 90%,     
       rgba(0, 0, 0, 1) 100%     
   ),
-  url(/fotos/fotoSection.jpg) 
+  url(../fotos/fotoSection.jpg) 
 no-repeat center center /cover;
   position: relative; 
   padding-top:12rem;
+  
 }
 
 .home{
@@ -366,19 +367,10 @@ no-repeat center center /cover;
 .work-figure {
   position: relative; /* Permite que los botones se posicionen dentro del contenedor */
   max-width: 48%; /* Ajusta el ancho máximo del carrusel */
-  margin: 3.4rem auto; /* Centra el contenedor */
-  overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
-  border-radius: 20px; /* Bordes redondeados */
-}
-.work-figurerobo{
-  position: relative; /* Permite que los botones se posicionen dentro del contenedor */
-  max-width: 48%; /* Ajusta el ancho máximo del carrusel */
   margin: 0rem auto; /* Centra el contenedor */
   overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
   border-radius: 20px; /* Bordes redondeados */
-  
 }
-
 
 .carousel-slide {
   display: flex;
@@ -396,15 +388,11 @@ no-repeat center center /cover;
 /* Estilos para el video */
 .work-video,.work-img {
   width: 100%;
-  height: 600px;
+  height: 60vh;
   border-radius: 8px; /* Bordes redondeados en el video */
+  object-fit: contain;
 }
-.work-robocode{
-  width: 80%;
-  height: auto;
-  border-radius: 8px;
-  
-}
+
 
 
 
@@ -416,11 +404,11 @@ figcaption {
   font-weight:200;
   margin-left: 0.4rem;
 }
-.work-figurerobo .fig-robocode{
 
-  width: 80%;
+.carousel-slide .carousel-item img + figcaption {
+  margin-top: 0rem;
+ 
 }
-
 /* Botones de navegación del carrusel */
 .prev-btn, .next-btn {
   position: absolute;
@@ -581,7 +569,7 @@ article li{
 }
 
 .about {
-  height: 100vh; /* Asegura que la sección tenga exactamente el 100% de la altura del viewport */
+  min-height: 100vh; /* Asegura que la sección tenga exactamente el 100% de la altura del viewport */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -599,10 +587,11 @@ article li{
 .center-text {
   display: flex;
   width: 100%;
+  max-width: 100%;
   flex-flow: column wrap ;
   align-items: center;
   justify-content: center;
-  margin-top: -6rem;
+  margin-top: -7rem;
   
 }
 
@@ -712,11 +701,12 @@ about .p-left em, .about .p-right em {
   rgba(0, 0, 0, 1) 90%,    
   rgba(0, 0, 0, 1) 100%     
 ),
-url(/fotos/fotoSection.jpg) 
+url(../fotos/fotoSection.jpg) 
 no-repeat center center /cover;
   color: rgb(180, 187, 182);
   padding: 2rem;
   text-align: center;
+  
   
 }
 
