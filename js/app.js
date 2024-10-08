@@ -2,7 +2,7 @@
 const container = document.querySelector('.home');
 const mountain = document.querySelector('.parallax-item-mountain');
 const background = document.querySelector('.parallax-item-background');
-const titleh1 = document.querySelector('.parallax-title-h1'); // Selecciona los elementos de título
+const titleh1 = document.querySelector('.parallax-title-h1'); 
 const titleh2 = document.querySelector('.parallax-title-h2');
 container.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
@@ -14,7 +14,7 @@ container.addEventListener('mousemove', (e) => {
     mountain.style.transform = `translateX(${offsetX}px)`;
     background.style.transform = `translateX(${offsetX / 2}px)`;
 
-    // Aplica el efecto de parallax a los elementos de título
+    
     titleh1.style.transform = `translateX(${offsetX / 1.5}px)`;
     titleh2.style.transform = `translateX(${offsetX /1.2 }px)`;
 });
@@ -35,41 +35,40 @@ window.addEventListener("mousemove",function(e){
 });
 
 
-// Crear un objeto para almacenar el índice actual de cada carrusel
+
 let currentSlideIndex = {};
 
-// Función para mover el slide en un carrusel específico
+
 function moveSlide(n, carouselId) {
   const slides = document.querySelectorAll(`#${carouselId} .carousel-item`);
   
-  // Si el índice del carrusel no existe aún, inicializarlo
+  
   if (!currentSlideIndex[carouselId]) {
     currentSlideIndex[carouselId] = 0;
   }
   
-  // Calcular el nuevo índice del slide
+ 
   currentSlideIndex[carouselId] = (currentSlideIndex[carouselId] + n + slides.length) % slides.length;
   
-  // Ocultar todos los slides
+  
   slides.forEach(slide => slide.style.display = 'none');
   
-  // Mostrar el slide actual
+  
   slides[currentSlideIndex[carouselId]].style.display = 'block';
 }
 
-// Inicializar todos los carruseles
 function initCarousels() {
   const carousels = document.querySelectorAll('.carousel-container');
   
   carousels.forEach(carousel => {
     const carouselId = carousel.id;
     
-    // Mostrar el primer slide de cada carrusel
+ 
     moveSlide(0, carouselId);
   });
 }
 
-// Llamar a la función para inicializar los carruseles cuando el DOM esté listo
+
 document.addEventListener("DOMContentLoaded", function() {
   initCarousels();
 });
@@ -83,51 +82,42 @@ function calculateAge(birthDate) {
   const monthDiff = now.getMonth() - birth.getMonth();
   const dayDiff = now.getDate() - birth.getDate();
 
-  // Ajustar si el mes o el día no han llegado este año
+  
   if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
       age--;
   }
   return age;
 }
 
-// Fecha de nacimiento: 16 de noviembre de 2003
+
 const birthDate = '2003-11-16';
 const age = calculateAge(birthDate);
 
 
-// Wait for the DOM content to be loaded
+
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.nav .a');
-  const sections = document.querySelectorAll('section'); // All sections with ids matching the links
+  const sections = document.querySelectorAll('section'); 
+  const buffer = 200; 
 
-  // Function to remove the 'selected' class from all links
-  function removeSelected() {
-    navLinks.forEach(link => link.classList.remove('selected'));
-  }
-
-  // Function to add the 'selected' class to the clicked link
-  function selectLink(event) {
-    removeSelected();
-    event.target.classList.add('selected');
-  }
-
-  // Add click event listener to all the nav links
-  navLinks.forEach(link => {
-    link.addEventListener('click', selectLink);
-  });
-
-  // Function to detect the section currently in the viewport
+  
   function onScroll() {
     let currentSection = "";
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop - 50) { // Adjust 50px to tweak when the section is selected
+      const sectionHeight = section.offsetHeight;
+      
+      
+      if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight - 50) {
         currentSection = section.getAttribute('id');
       }
     });
 
-    // Remove 'selected' class from all links, then add it to the currently active section link
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - buffer)) {
+      currentSection = "contact"; 
+    }
+
     navLinks.forEach(link => {
       link.classList.remove('selected');
       if (link.getAttribute('href').includes(currentSection)) {
@@ -136,6 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Listen for scroll events
+
   window.addEventListener('scroll', onScroll);
 });

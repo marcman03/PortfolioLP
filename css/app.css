@@ -8,14 +8,14 @@
     --tipo--titular : ''
   }
     
-  /* (Opcional) Las adaptamos al modo oscuro */
+  /*  Las adaptamos al modo oscuro */
   @media (prefers-color-scheme: dark) {
     :root{
         --negro         : #ececec;
     }
   }
   
-  /* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+  /*  Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
   @media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;
@@ -40,8 +40,8 @@
     max-width: 100%;
     width: 100%;
     display: block;
-    /* (Opcional) */ object-fit: cover;        
-    /* (Opcional) */ object-position: center center;
+    object-fit: cover;        
+   object-position: center center;
   }
   
   /* Reseteamos los enlaces para funcionar como cajas... */
@@ -126,7 +126,6 @@
 
 
 
-/*Def clases*/
 
 
 
@@ -135,7 +134,7 @@
   padding: 0;
 
 }
-/*header*/
+
 .header{
   width: 100%;
   padding: 1.7rem 6rem;
@@ -200,9 +199,9 @@
 }
 .nav .a:hover,.nav .a:focus {
   color:#b6edcf ;
-   /* Puedes añadir un borde o un subrayado diferente */
+   
 }
-/*main*/
+
 
 .section {
   width: 100%;
@@ -325,10 +324,10 @@ no-repeat center center /cover;
     margin-top: 0px;
 }
 .works {
-  width: 100%; /* Utiliza el ancho completo de la sección */
-  align-self: flex-start; /* Alinea el contenido al inicio del contenedor flex */
+  width: 100%; 
+  align-self: flex-start; 
   
-  padding-top: 6rem; /* Elimina cualquier padding superior que pueda estar empujando el contenido hacia abajo */
+  padding-top: 6rem; 
   
 }
 .works .work-text .h2{
@@ -354,17 +353,15 @@ no-repeat center center /cover;
 
 .work-item {
   display: flex;
-  align-items: flex-start; /* Alinea el contenido al principio */
-  justify-content: space-between; /* Separa el texto y la imagen al máximo */
+  align-items: flex-start; 
+  justify-content: space-between; 
   margin-bottom: 25px;
-  padding: 20px; /* Agrega espacio interno alrededor del contenido */
-  background-color: rgba(225, 243, 235, 0.089); /* Fondo blanco semi-transparente */
-  border-radius: 8px; /* Bordes redondeados */
-
-  /* Sombra interna para imitar un borde dentro */
-  box-shadow: inset 0 0 0 0.2px #48504b; /* Ajusta el grosor y color de la "sombra" interna */
+  padding: 20px; 
+  background-color: rgba(225, 243, 235, 0.089); 
+  border-radius: 8px; 
+  box-shadow: inset 0 0 0 0.2px #48504b; 
   
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  transition: background-color 0.3s ease; 
 }
 .work-item.reverse {
     flex-direction: row-reverse;
@@ -372,20 +369,19 @@ no-repeat center center /cover;
 
 
 .work-text {
-  flex: 1; /* Ocupa el espacio restante que no use la imagen */
-  padding: 0 20px; /* Agrega un espacio a los lados del texto */
+  flex: 1; 
+  padding: 0 20px; 
   text-align: start;
 }
-/*FOTOOOOOOOOOOOOOOOOOOOOOOOOO*/
 
 
 
 .work-figure {
-  position: relative; /* Permite que los botones se posicionen dentro del contenedor */
-  max-width: 48%; /* Ajusta el ancho máximo del carrusel */
-  margin: 0rem auto; /* Centra el contenedor */
-  overflow: hidden; /* Oculta los elementos fuera del contenedor visible */
-  border-radius: 20px; /* Bordes redondeados */
+  position: relative; 
+  max-width: 48%; 
+  margin: 0rem auto; 
+  overflow: hidden; 
+  border-radius: 20px; 
 }
 
 .carousel-slide {
@@ -395,7 +391,7 @@ no-repeat center center /cover;
 }
 
 .carousel-item {
-  min-width: 100%; /* Cada item (video o imagen) ocupa todo el ancho del contenedor */
+  min-width: 100%;
 
   box-sizing: border-box;
 
@@ -405,7 +401,7 @@ no-repeat center center /cover;
 .work-video,.work-img {
   width: 100%;
   height: 60vh;
-  border-radius: 8px; /* Bordes redondeados en el video */
+  border-radius: 8px; 
   object-fit: contain;
 }
 
@@ -430,39 +426,39 @@ figcaption strong{
   margin-top: 0rem;
  
 }
-/* Botones de navegación del carrusel */
+
 .prev-btn, .next-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Alinea verticalmente los botones */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para los botones */
+  transform: translateY(-50%); 
+  background-color: rgba(0, 0, 0, 0.5); 
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
-  border-radius: 50%; /* Forma redonda */
+  border-radius: 50%; 
   font-size: 1.5rem;
 }
 
 .prev-btn {
-  left: 10px; /* Posiciona el botón de anterior en la izquierda */
+  left: 10px; 
 }
 
 .next-btn {
-  right: 10px; /* Posiciona el botón de siguiente en la derecha */
+  right: 10px;
 }
 
 .prev-btn:hover, .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el mouse */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Estilo para ocultar elementos que están fuera de la vista */
+
 .carousel-item {
   display: none;
 }
 
 .carousel-item.active {
-  display: block; /* Solo muestra el item activo (imagen o video) */
+  display: block;
 }
 
 
@@ -473,7 +469,7 @@ figcaption strong{
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: 100;
-  color: #cbfae0; /* Color dorado para los subtítulos */
+  color: #cbfae0; 
 }
 
 article {
@@ -481,7 +477,7 @@ article {
 }
 article ul {
   margin: 0 0 1.5rem 0;
-  color: #b0b0b0; /* Color para el texto de la lista */
+  color: #b0b0b0; 
   
 }
 ul.objectives{
@@ -511,14 +507,14 @@ article li{
   padding: 5px 10px;
   background-color: rgb(180, 187, 182);
   border-radius: 5px;
-  color: #000; /* Color de texto negro */
+  color: #000;
 }
 
 .center {
-  display: flex;           /* Activa Flexbox */
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;      /* Centra verticalmente (opcional, si quieres centrar verticalmente también) */
-  height: 100%;             /* Asegura que ocupe todo el alto del contenedor, si es necesario */
+  display: flex;           
+  justify-content: center;  
+  align-items: center;      
+  height: 100%;             
 }
 .project-link {
   padding: 10px 20px;
@@ -530,13 +526,13 @@ article li{
   text-transform: uppercase;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0.1rem auto; /* Centra el botón horizontalmente */
+  margin: 0.1rem auto; 
   display: inline-block;
 }
 
 
 .project-link:hover {
-  background-color: #b6edcf; /* Color verde al hacer hover */
+  background-color: #b6edcf; 
 }
 
 
@@ -545,76 +541,76 @@ article li{
 
 @media (max-width: 1250px) {
   .section.works {
-    width: 100vw; /* Asegura que la sección ocupe todo el ancho del viewport */
-    padding: 0; /* Elimina el padding */
-    margin: 0; /* Elimina márgenes */
+    width: 100vw; 
+    padding: 0; 
+    margin: 0; 
   }
 
   .section.works .grid {
-    width: 100vw; /* Asegura que la grid ocupe todo el ancho del viewport */
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina padding */
-    display: block; /* Coloca los elementos en bloque, uno debajo del otro */
+    width: 100vw; 
+    margin: 0; 
+    padding: 0; 
+    display: block; 
   }
 
   .work-item {
-    width: 100vw; /* Ocupa todo el ancho */
+    width: 100vw; 
     display: block;
     text-align: center;
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin márgenes */
+    padding: 0; 
+    margin: 0; 
   }
 
 
 
-/* Ajuste de imagen para ocupar todo el ancho */
+
 .work-figure, .carousel-item {
-  max-width: 90vw; /* Ajusta el ancho para dejar margen */
-  width: 90vw; /* Imagen o video ocupará el 80% del ancho total */
+  max-width: 90vw; 
+  width: 90vw; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5vw auto; /* Aplica márgenes iguales en todos los lados (arriba, abajo, izquierda, derecha) */
-  padding: 0; /* Elimina padding extra */
-  text-align: center; /* Centra los elementos dentro */
+  margin: 5vw auto; 
+  padding: 0; 
+  text-align: center; 
 }
 
 .work-img {
-  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  width: 100%; 
   
-  height: auto; /* Ajusta la altura automáticamente */
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
-  margin: 0; /* Elimina márgenes extra */
-  padding: 0; /* Sin padding */
+  height: auto; 
+  object-fit: cover; 
+  margin: 0; 
+  padding: 0; 
 }
 
-/* Ajuste de video para ocupar todo el ancho */
+
 .work-video {
-  width: 100%; /* El video ocupa todo el ancho del contenedor */
-  max-width: 100vw; /* Asegura que no exceda el ancho de la pantalla */
-  height: auto; /* Ajusta la altura automáticamente */
-  object-fit: cover; /* Asegura que el video se ajuste al contenedor sin deformarse */
-  margin: 0; /* Sin márgenes */
-  padding: 0; /* Sin padding */
+  width: 100%; 
+  max-width: 100vw; 
+  height: auto; 
+  object-fit: cover; 
+  margin: 0; 
+  padding: 0; 
 }
 
-/* Ajuste para el figcaption */
+
 .work-figure figcaption {
-  width: 100%; /* Asegura que el figcaption ocupe todo el ancho */
-  max-width: 100vw; /* Asegura que no exceda el ancho del viewport */
-  padding: 10px; /* Añade un poco de padding */
+  width: 100%; 
+  max-width: 100vw; 
+  padding: 10px; 
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-  color: #fff; /* Color del texto del figcaption */
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff; 
   text-align: center;
-  margin-top: 10px; /* Añade margen superior para separarlo del video */
+  margin-top: 10px;
 }
 
-  /* Ajuste para el texto de la descripción */
+  
   .work-text {
-    width: 100%; /* Asegura que el texto ocupe todo el ancho */
-    padding: 0 1rem; /* Añade padding */
+    width: 100%; 
+    padding: 0 1rem; 
   }
 }
 
@@ -645,7 +641,7 @@ article li{
 }
 
 .about {
-  min-height: 100vh; /* Asegura que la sección tenga exactamente el 100% de la altura del viewport */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -735,16 +731,16 @@ article li{
 }
 about .p-left em, .about .p-right em {
   font-style: italic;
-  color: #cbfae0; /* Un tono marrón suave para destacar */
+  color: #cbfae0; 
 }
 
 .about .p-left strong, .about .p-right strong {
   font-weight: bold;
-  color: #cbfae0; /* Un dorado claro para llamar la atención */
+  color: #cbfae0; 
 }
 @media (max-width: 1250px) {
   .about .text {
-    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    flex-direction: column; 
     align-items: center;
   }
 
@@ -757,7 +753,7 @@ about .p-left em, .about .p-right em {
   }
 }
 .about .button {
-  margin-top: 0rem; /* Reduce el margen superior para subir el botón */
+  margin-top: 0rem; 
   border-color: #b6edcf;
   padding: 1rem 1rem;
   background-color: rgb(180, 187, 182);
@@ -765,8 +761,8 @@ about .p-left em, .about .p-right em {
 }
 
 .about .button:hover {
-  background-color: #b6edcf; /* Cambia al color verdoso deseado */
-  color: #393939; /* Cambia el color del texto si es necesario */
+  background-color: #b6edcf; 
+  color: #393939; 
 }
 
 
