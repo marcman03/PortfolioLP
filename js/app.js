@@ -74,3 +74,25 @@ document.addEventListener("DOMContentLoaded", function() {
   initCarousels();
 });
 
+
+
+function calculateAge(birthDate) {
+  const now = new Date();
+  const birth = new Date(birthDate);
+  let age = now.getFullYear() - birth.getFullYear();
+  const monthDiff = now.getMonth() - birth.getMonth();
+  const dayDiff = now.getDate() - birth.getDate();
+
+  // Ajustar si el mes o el día no han llegado este año
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      age--;
+  }
+  return age;
+}
+
+// Fecha de nacimiento: 16 de noviembre de 2003
+const birthDate = '2003-11-16';
+const age = calculateAge(birthDate);
+
+// Mostrar la edad en el HTML
+document.getElementById('age').textContent = age;
