@@ -161,13 +161,22 @@
 @media (max-width: 768px) {
 .header .h1{
   display: none;
+  
 }
 .header{
   justify-content: center;
+  font-size: 1.1rem;
+  
+
 }
+.parallax-container{
+  max-width: 100%;
+
+}
+
 }
 .header .h1 .a{
-  padding: 0em;
+ 
 }
 .header .nav{
 
@@ -198,10 +207,10 @@
  
   padding: 2rem;
   background: linear-gradient(to bottom, 
-      rgba(0, 0, 0, 1) 0%,    
+      rgba(0, 0, 0, 0.90) 0%,    
       rgba(0, 0, 0, 0.70) 70%,   
-      rgba(0, 0, 0, 0.9) 90%,     
-      rgba(0, 0, 0, 1) 100%     
+    
+      rgba(0, 0, 0, 0.90) 100%     
   ),
   url(../fotos/fotoSection.jpg) 
 no-repeat center center /cover;
@@ -227,22 +236,25 @@ no-repeat center center /cover;
 
 
 .section .title{ 
-  z-index: 30;
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
 
 }
 .section .title-container{
-  position: relative;
-  bottom: 8rem;
-  line-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 }
 .section .title .h1{
   font-size: 7rem;
-  position: relative;
+ 
   letter-spacing: -0.4rem;
-  top:1.5rem;
   font-weight: bold;
   color:  rgb(180, 187, 182); 
   line-height: 6rem;
@@ -251,17 +263,15 @@ no-repeat center center /cover;
 }
 
 .section .title .h2{
-  margin-top: 2rem;
-  font-size: 3rem;
-  position: absolute;
-  left: 24%;
+  font-size: 4rem;
   letter-spacing: -0.4rem;
   font-weight: 100;
   color:  rgb(180, 187, 182); 
-  line-height: 3rem;
+  line-height: 2.5rem;
 
 
 }
+
 
 .parallax-container{
   position: absolute;
@@ -321,7 +331,7 @@ no-repeat center center /cover;
   color: #cbfae0;
   
 
-}
+} 
 
 
 .works p {
@@ -340,13 +350,13 @@ no-repeat center center /cover;
   display: flex;
   align-items: flex-start; /* Alinea el contenido al principio */
   justify-content: space-between; /* Separa el texto y la imagen al máximo */
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   padding: 20px; /* Agrega espacio interno alrededor del contenido */
-  background-color: rgba(14, 190, 105, 0.089); /* Fondo blanco semi-transparente */
+  background-color: rgba(225, 243, 235, 0.089); /* Fondo blanco semi-transparente */
   border-radius: 8px; /* Bordes redondeados */
 
   /* Sombra interna para imitar un borde dentro */
-  box-shadow: inset 0 0 0 2px #b6edcf; /* Ajusta el grosor y color de la "sombra" interna */
+  box-shadow: inset 0 0 0 0.2px #48504b; /* Ajusta el grosor y color de la "sombra" interna */
   
   transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
@@ -404,7 +414,12 @@ figcaption {
   font-weight:200;
   margin-left: 0.4rem;
 }
+figcaption strong{
+  font-style: bold;
+  color: #cbfae0;
 
+
+}
 .carousel-slide .carousel-item img + figcaption {
   margin-top: 0rem;
  
@@ -522,26 +537,81 @@ article li{
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
+  .section.works {
+    width: 100vw; /* Asegura que la sección ocupe todo el ancho del viewport */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina márgenes */
+  }
+
+  .section.works .grid {
+    width: 100vw; /* Asegura que la grid ocupe todo el ancho del viewport */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    display: block; /* Coloca los elementos en bloque, uno debajo del otro */
+  }
+
   .work-item {
-    display: block; /* Cambia el layout a bloque, coloca los elementos uno debajo del otro */
-    text-align: center; /* Opcional, para centrar el texto */
-    
+    width: 100vw; /* Ocupa todo el ancho */
+    display: block;
+    text-align: center;
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin márgenes */
   }
 
-  .work-figure, .work-text {
-    width: 100%; /* Ocupan todo el ancho */
-    margin: 0 auto; /* Centra el carrusel y el texto */
-  }
 
-  .work-figure {
-    margin-top: 20px; /* Añade un margen entre el texto y el carrusel */
-  }
 
-  .work-video, .work-img {
-    max-height: 300px; /* Ajusta la altura en pantallas más pequeñas */
+/* Ajuste de imagen para ocupar todo el ancho */
+.work-figure, .carousel-item {
+  max-width: 90vw; /* Ajusta el ancho para dejar margen */
+  width: 90vw; /* Imagen o video ocupará el 80% del ancho total */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5vw auto; /* Aplica márgenes iguales en todos los lados (arriba, abajo, izquierda, derecha) */
+  padding: 0; /* Elimina padding extra */
+  text-align: center; /* Centra los elementos dentro */
+}
+
+.work-img {
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  margin: 0; /* Elimina márgenes extra */
+  padding: 0; /* Sin padding */
+}
+
+/* Ajuste de video para ocupar todo el ancho */
+.work-video {
+  width: 100%; /* El video ocupa todo el ancho del contenedor */
+  max-width: 100vw; /* Asegura que no exceda el ancho de la pantalla */
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover; /* Asegura que el video se ajuste al contenedor sin deformarse */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin padding */
+}
+
+/* Ajuste para el figcaption */
+.work-figure figcaption {
+  width: 100%; /* Asegura que el figcaption ocupe todo el ancho */
+  max-width: 100vw; /* Asegura que no exceda el ancho del viewport */
+  padding: 10px; /* Añade un poco de padding */
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #fff; /* Color del texto del figcaption */
+  text-align: center;
+  margin-top: 10px; /* Añade margen superior para separarlo del video */
+}
+
+  /* Ajuste para el texto de la descripción */
+  .work-text {
+    width: 100%; /* Asegura que el texto ocupe todo el ancho */
+    padding: 0 1rem; /* Añade padding */
   }
 }
+
 
 
 .section .h6{
@@ -666,7 +736,7 @@ about .p-left em, .about .p-right em {
   font-weight: bold;
   color: #cbfae0; /* Un dorado claro para llamar la atención */
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .about .text {
     flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
     align-items: center;
@@ -706,6 +776,7 @@ no-repeat center center /cover;
   color: rgb(180, 187, 182);
   padding: 2rem;
   text-align: center;
+  max-width: 100%;
   
   
 }
@@ -735,7 +806,7 @@ no-repeat center center /cover;
 }
 
 .footer-email {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgb(180, 187, 182);
 }
 
@@ -746,7 +817,7 @@ no-repeat center center /cover;
 }
 
 .footer-email-link:hover {
-  
+  padding:1em;
   color:#cbfae0 ;
 }
 
