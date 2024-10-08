@@ -75,24 +75,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function calculateAge(birthDate) {
-  const now = new Date();
-  const birth = new Date(birthDate);
-  let age = now.getFullYear() - birth.getFullYear();
-  const monthDiff = now.getMonth() - birth.getMonth();
-  const dayDiff = now.getDate() - birth.getDate();
+document.addEventListener("DOMContentLoaded", function() {
+  // Replace this with your actual birthdate
+  const birthDate = new Date("2003-11-16"); 
 
-  
-  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+  function calculateAge(birthdate) {
+    const today = new Date();
+    let age = today.getFullYear() - birthdate.getFullYear();
+    const monthDifference = today.getMonth() - birthdate.getMonth();
+    
+    // Adjust if the birthday hasn't occurred yet this year
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthdate.getDate())) {
       age--;
+    }
+    return age;
   }
-  return age;
-}
 
-
-const birthDate = '2003-11-16';
-const age = calculateAge(birthDate);
-
+  // Set the age in the span with id "age"
+  const ageSpan = document.getElementById("age");
+  ageSpan.textContent = calculateAge(birthDate);
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
