@@ -645,7 +645,7 @@ article li{
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0.9) 4%,
+    rgba(0, 0, 0, 1) 4%,
     rgba(0, 0, 0, 0.45) 50%,
     rgba(0, 0, 0, 0.9) 100%),
     linear-gradient(to right, rgb(0, 0, 1) 10%, transparent 40%),
