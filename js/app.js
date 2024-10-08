@@ -97,15 +97,17 @@ const age = calculateAge(birthDate);
 
 // Wait for the DOM content to be loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all the links in the navigation bar
   const navLinks = document.querySelectorAll('.nav .a');
+  const sections = document.querySelectorAll('section'); // All sections with ids matching the links
 
-  // Function to remove the 'selected' class from all links and add it to the clicked one
-  function selectLink(event) {
-    // Remove the 'selected' class from all links
+  // Function to remove the 'selected' class from all links
+  function removeSelected() {
     navLinks.forEach(link => link.classList.remove('selected'));
+  }
 
-    // Add the 'selected' class to the clicked link
+  // Function to add the 'selected' class to the clicked link
+  function selectLink(event) {
+    removeSelected();
     event.target.classList.add('selected');
   }
 
@@ -113,4 +115,27 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach(link => {
     link.addEventListener('click', selectLink);
   });
+
+  // Function to detect the section currently in the viewport
+  function onScroll() {
+    let currentSection = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (window.scrollY >= sectionTop - 50) { // Adjust 50px to tweak when the section is selected
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // Remove 'selected' class from all links, then add it to the currently active section link
+    navLinks.forEach(link => {
+      link.classList.remove('selected');
+      if (link.getAttribute('href').includes(currentSection)) {
+        link.classList.add('selected');
+      }
+    });
+  }
+
+  // Listen for scroll events
+  window.addEventListener('scroll', onScroll);
 });
