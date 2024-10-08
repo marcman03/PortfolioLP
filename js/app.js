@@ -94,5 +94,23 @@ function calculateAge(birthDate) {
 const birthDate = '2003-11-16';
 const age = calculateAge(birthDate);
 
-// Mostrar la edad en el HTML
-document.getElementById('age').textContent = age;
+
+// Wait for the DOM content to be loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all the links in the navigation bar
+  const navLinks = document.querySelectorAll('.nav .a');
+
+  // Function to remove the 'selected' class from all links and add it to the clicked one
+  function selectLink(event) {
+    // Remove the 'selected' class from all links
+    navLinks.forEach(link => link.classList.remove('selected'));
+
+    // Add the 'selected' class to the clicked link
+    event.target.classList.add('selected');
+  }
+
+  // Add click event listener to all the nav links
+  navLinks.forEach(link => {
+    link.addEventListener('click', selectLink);
+  });
+});
