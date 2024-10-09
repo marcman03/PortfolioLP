@@ -557,7 +557,6 @@ article li{
     width: 100vw; 
     display: block;
     text-align: center;
-    padding: 0; 
     
   }
 
@@ -581,8 +580,7 @@ article li{
   
   height: auto; 
   object-fit: cover; 
-  margin: 0; 
-  padding: 0; 
+
 }
 
 
@@ -591,8 +589,7 @@ article li{
   max-width: 100vw; 
   height: auto; 
   object-fit: cover; 
-  margin: 0; 
-  padding: 0; 
+
 }
 
 

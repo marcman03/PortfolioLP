@@ -131,3 +131,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('scroll', onScroll);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousels = document.querySelectorAll('.carousel-container');
+
+  carousels.forEach(carousel => {
+      let startX = 0;
+      let currentIndex = 0;
+      const items = carousel.querySelectorAll('.carousel-item');
+
+      
+      items[0].style.display = 'block';
+
+   
+      function showSlide(index) {
+          items.forEach((item, i) => {
+              item.style.display = i === index ? 'block' : 'none';
+          });
+      }
+
+
+      carousel.addEventListener('touchstart', function (e) {
+          startX = e.touches[0].clientX;
+      });
+
+      carousel.addEventListener('touchend', function (e) {
+          const endX = e.changedTouches[0].clientX;
+          const distance = endX - startX;
+
+          if (distance < -50) {
+             
+              currentIndex = (currentIndex + 1) % items.length;
+              showSlide(currentIndex);
+          } else if (distance > 50) {
+              
+              currentIndex = (currentIndex - 1 + items.length) % items.length;
+              showSlide(currentIndex);
+          }
+      });
+  });
+});
