@@ -391,6 +391,8 @@ no-repeat center center /cover;
 }
 
 .carousel-item {
+  position: relative;
+
   min-width: 100%;
 
   box-sizing: border-box;
@@ -426,6 +428,9 @@ figcaption strong{
   margin-top: 0rem;
  
 }
+.button{
+  position:relative;
+}
 
 .prev-btn, .next-btn {
   position: absolute;
@@ -452,14 +457,6 @@ figcaption strong{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-.carousel-item {
-  display: none;
-}
-
-.carousel-item.active {
-  display: block;
-}
 
 
 
